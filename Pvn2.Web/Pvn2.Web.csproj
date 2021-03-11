@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0644565B-F78C-4ED9-AD34-2AABD9EFFE5B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pvn2.Web</RootNamespace>
+    <AssemblyName>Pvn2.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>09eca5ea</NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.4.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNetPager.7.4.2\lib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Images\2016\English\e-exp-23022014-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-exp-23022014-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-ita-26092013.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-memo-03022015.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-pet-10112013.JPG" />
+    <Content Include="DataStore\Images\2016\English\e-pvep-10112013.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-pvep-19112013.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-pvg-21042014.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-pvi-13022014.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-pvn-10092011.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-rea-11082014.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-ris-19012014.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sci-02092014-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sci-02092014-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sci-02092014-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sci-02092014-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sci-02092014-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sci-02092014-6.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-sma-23022014.jpg" />
+    <Content Include="DataStore\Images\2016\English\e-usd-09032014.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-6.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-7.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-05092016-1-8.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-1-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-1-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-1-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-2-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-2-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-2-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-3-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-10.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-11.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-12.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-6.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-7.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-8.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-4-9.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-5-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-5-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-5-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-6-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-18082016-6-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-1-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-1-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-1-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-10-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-10-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-11-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-11-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-11-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-11-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-11-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-2-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-2-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-2-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-3-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-3-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-3-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-3-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-4-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-4-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-4-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-4-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-4-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-4-6.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-6.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-5-7.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-6-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-6-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-6-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-7-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-7-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-7-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-7-4.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-7-5.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-8-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-8-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-8-3.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-9-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-19082016-9-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-21092016-1-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-21092016-1-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-21092016-2-1.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-21092016-2-2.jpg" />
+    <Content Include="DataStore\Images\2016\English\PVN-News-21092016-2-3.jpg" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Site.Master" />
+    <Content Include="sites\en\Pages\banlanhdao.aspx" />
+    <Content Include="sites\en\Pages\default.aspx" />
+    <Content Include="sites\en\Pages\detail.aspx" />
+    <Content Include="sites\en\Pages\detailv1.aspx" />
+    <Content Include="sites\en\Pages\detailv2.aspx" />
+    <Content Include="sites\en\Pages\detailv4.aspx" />
+    <Content Include="sites\en\Pages\detailv5.aspx" />
+    <Content Include="sites\en\Pages\gioithieu.aspx" />
+    <Content Include="sites\en\Pages\History.aspx" />
+    <Content Include="sites\en\Pages\lichsuphattrien.aspx" />
+    <Content Include="sites\en\Pages\list.aspx" />
+    <Content Include="sites\en\Pages\OurLeaders.aspx" />
+    <Content Include="sites\en\Pages\photo.aspx" />
+    <Content Include="sites\en\Pages\tintuc.aspx" />
+    <Content Include="sites\en\Pages\video.aspx" />
+    <Content Include="sites\en\Pages\WebForm1.aspx" />
+    <Content Include="ucFooter.ascx" />
+    <Content Include="ucTop.ascx" />
+    <Content Include="Usercontrols_EN\ucAboutMain.ascx" />
+    <Content Include="Usercontrols_EN\ucbanlanhdao.ascx" />
+    <Content Include="Usercontrols_EN\ucBreadcumb.ascx" />
+    <Content Include="Usercontrols_EN\ucBreadcumbMEDIA.ascx" />
+    <Content Include="Usercontrols_EN\ucHistory.ascx" />
+    <Content Include="Usercontrols_EN\ucMenuBottom.ascx" />
+    <Content Include="Usercontrols_EN\ucMenuSideEN.ascx" />
+    <Content Include="Usercontrols_EN\ucMenuTop.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsBreadCumb.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsDetail.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsDetail2.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsList.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsListMain.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsRelated.ascx" />
+    <Content Include="Usercontrols_EN\ucPanoSlideFullWidth.ascx" />
+    <Content Include="Usercontrols_EN\ucPhoto.ascx" />
+    <Content Include="Usercontrols_EN\ucProductMain.ascx" />
+    <Content Include="Usercontrols_EN\ucTopBar_KH.ascx" />
+    <Content Include="Usercontrols_EN\ucTopHeading.ascx" />
+    <Content Include="Usercontrols_EN\ucVideo.ascx" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="wp-content\css\animate.css" />
+    <Content Include="wp-content\css\bootstrap.min.css" />
+    <Content Include="wp-content\css\custom.css" />
+    <Content Include="wp-content\css\dist.en.css" />
+    <Content Include="wp-content\css\flaticon.css" />
+    <Content Include="wp-content\css\font-awesome.min.css" />
+    <Content Include="wp-content\css\jquery-ui.css" />
+    <Content Include="wp-content\css\magnific-popup.css" />
+    <Content Include="wp-content\css\owl.carousel.min.css" />
+    <Content Include="wp-content\css\slick.css" />
+    <Content Include="wp-content\css\style.css" />
+    <Content Include="wp-content\fonts\flaticon.svg" />
+    <Content Include="wp-content\fonts\font-awesome\font-awesome1845.css" />
+    <Content Include="wp-content\fonts\fontawesome-webfont914c.svg" />
+    <Content Include="wp-content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wp-content\Img\011_262_175.jpg" />
+    <Content Include="wp-content\Img\09102018-002_262_175.jpg" />
+    <Content Include="wp-content\Img\11_262_175.jpg" />
+    <Content Include="wp-content\Img\2.jpg" />
+    <Content Include="wp-content\Img\2609-001-1_262_175.jpg" />
+    <Content Include="wp-content\Img\2609002-1_262_175.jpg" />
+    <Content Include="wp-content\Img\33_262_175.jpg" />
+    <Content Include="wp-content\Img\anh 11_262_175.jpg" />
+    <Content Include="wp-content\Img\anh C_262_175.jpg" />
+    <Content Include="wp-content\Img\bsr-cung-cap-cac-san-phan-dich-vu-dang-cap.jpg" />
+    <Content Include="wp-content\Img\bsr-nang-luong-dong-hanh.jpg" />
+    <Content Include="wp-content\Img\h11_262_175.jpg" />
+    <Content Include="wp-content\Img\H22_262_175.jpg" />
+    <Content Include="wp-content\Img\H2_262_175.jpg" />
+    <Content Include="wp-content\Img\hinh 4_262_175.JPG" />
+    <Content Include="wp-content\Img\logo.png" />
+    <Content Include="wp-content\Img\new.gif" />
+    <Content Include="wp-content\Img\next.png" />
+    <Content Include="wp-content\Img\prev.png" />
+    <Content Include="wp-content\Img\video-bsr.png" />
+    <Content Include="wp-content\js\custom.js" />
+    <Content Include="wp-content\js\dist.en.js" />
+    <Content Include="wp-content\js\jquery-ui.js" />
+    <Content Include="wp-content\js\jquery.magnific-popup.js" />
+    <Content Include="wp-content\js\jquery.min.js" />
+    <Content Include="wp-content\js\owl.carousel.min.js" />
+    <Content Include="wp-content\js\slick.min.js" />
+    <Content Include="wp-content\js\toast.js" />
+    <Content Include="wp-content\uploads\2017\06\banner-page.jpg" />
+    <Content Include="wp-content\uploads\2017\06\banner.png" />
+    <Content Include="wp-content\uploads\2017\06\banner1.png" />
+    <Content Include="wp-content\uploads\2017\06\bgoverlay-1.jpg" />
+    <Content Include="wp-content\uploads\2017\06\dvtv-100.jpg" />
+    <Content Include="wp-content\uploads\2017\06\dvtv-bqlda.jpg" />
+    <Content Include="wp-content\uploads\2017\06\dvtv-daotao.jpg" />
+    <Content Include="wp-content\uploads\2017\06\dvtv-duoi50.jpg" />
+    <Content Include="wp-content\uploads\2017\06\dvtv-tren50.jpg" />
+    <Content Include="wp-content\uploads\2017\06\dvtv-vpdd.jpg" />
+    <Content Include="wp-content\uploads\2017\06\el.png" />
+    <Content Include="wp-content\uploads\2017\06\el_0.png" />
+    <Content Include="wp-content\uploads\2017\06\en.png" />
+    <Content Include="wp-content\uploads\2017\06\fere.jpg" />
+    <Content Include="wp-content\uploads\2017\06\fere.png" />
+    <Content Include="wp-content\uploads\2017\06\gas.png" />
+    <Content Include="wp-content\uploads\2017\06\gas_.png" />
+    <Content Include="wp-content\uploads\2017\06\IMG.png" />
+    <Content Include="wp-content\uploads\2017\06\imgtext.png" />
+    <Content Include="wp-content\uploads\2017\06\oill.JPG" />
+    <Content Include="wp-content\uploads\2017\06\oill_.png" />
+    <Content Include="wp-content\uploads\2017\06\slide-1.jpg" />
+    <Content Include="wp-content\uploads\2017\06\slide-3.jpg" />
+    <Content Include="wp-content\uploads\2017\06\vi.png" />
+    <Content Include="wp-content\uploads\2018\01\1959-fix.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1961.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1975-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1975.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1977.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1980.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1981-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1981.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1984.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1986.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1990.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1992.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1995.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1999.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2004.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2006-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2006.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2007.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2008.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2009.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2010.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2011-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2011.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2015.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-04-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-07-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-11-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-19-80x80.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-20-80x80.jpg" />
+    <Content Include="wp-content\uploads\2018\01\hse.PNG" />
+    <Content Include="wp-content\uploads\2018\01\light-logo.png" />
+    <Content Include="wp-content\uploads\2018\01\pvn_tapdoan.png" />
+    <Content Include="wp-content\uploads\2018\01\service-03-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\service-07-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\service-sidebar-about-us-image.jpg" />
+    <Content Include="wp-content\uploads\2018\06\DinhVanSon_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\DoChiThanh_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\home-commerce-preview-150x101.jpg" />
+    <Content Include="wp-content\uploads\2018\06\home-consultant-preview-150x101.jpg" />
+    <Content Include="wp-content\uploads\2018\06\home-exchange-preview-150x101.jpg" />
+    <Content Include="wp-content\uploads\2018\06\LeManhHung_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenHungDung_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenQuocThap_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenSinhKhang_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\nguyenthingonlan.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenTienVinh_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenVuTruongSon_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\Nguyen_Manh_Hung_KSV.png" />
+    <Content Include="wp-content\uploads\2018\06\PhamXuanCanh_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\PhanNgocTrung_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\team-member-2-01-270x350.jpg" />
+    <Content Include="wp-content\uploads\2018\06\team-member-2-02-270x350.jpg" />
+    <Content Include="wp-content\uploads\2018\06\team-member-2-03-270x350.jpg" />
+    <Content Include="wp-content\uploads\2018\06\team-member-2-04-270x350.jpg" />
+    <Content Include="wp-content\uploads\2018\06\TranSyThanh_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\vuhongnhung.png" />
+    <Content Include="wp-includes\img\banner.png" />
+    <Content Include="wp-includes\img\banner1.png" />
+    <Content Include="wp-includes\img\banner_about.PNG" />
+    <Content Include="wp-includes\img\en.png" />
+    <Content Include="wp-includes\img\icon_anh.PNG" />
+    <Content Include="wp-includes\img\img1.jpg" />
+    <Content Include="wp-includes\img\img2.jpg" />
+    <Content Include="wp-includes\img\img3.jpg" />
+    <Content Include="wp-includes\img\logo_2018.png" />
+    <Content Include="wp-includes\img\product_img.png" />
+    <Content Include="wp-includes\img\spin.svg" />
+    <Content Include="wp-includes\img\topmost-clock_w24.png" />
+    <Content Include="wp-includes\img\vi.png" />
+    <Content Include="wp-includes\js\counto\chart3ba1.js" />
+    <Content Include="wp-includes\js\counto\jquery.appear.min5152.js" />
+    <Content Include="wp-includes\js\counto\jquery.counto.min5152.js" />
+    <Content Include="wp-includes\js\index.js" />
+    <Content Include="wp-includes\js\jssor.slider-27.5.0.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Config_MenuTop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Config_MenuTop.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\banlanhdao.aspx.cs">
+      <DependentUpon>banlanhdao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\banlanhdao.aspx.designer.cs">
+      <DependentUpon>banlanhdao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv1.aspx.cs">
+      <DependentUpon>detailv1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv1.aspx.designer.cs">
+      <DependentUpon>detailv1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv2.aspx.cs">
+      <DependentUpon>detailv2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv2.aspx.designer.cs">
+      <DependentUpon>detailv2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv4.aspx.cs">
+      <DependentUpon>detailv4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv4.aspx.designer.cs">
+      <DependentUpon>detailv4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv5.aspx.cs">
+      <DependentUpon>detailv5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv5.aspx.designer.cs">
+      <DependentUpon>detailv5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\gioithieu.aspx.cs">
+      <DependentUpon>gioithieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\gioithieu.aspx.designer.cs">
+      <DependentUpon>gioithieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\lichsuphattrien.aspx.cs">
+      <DependentUpon>lichsuphattrien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\lichsuphattrien.aspx.designer.cs">
+      <DependentUpon>lichsuphattrien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\OurLeaders.aspx.cs">
+      <DependentUpon>OurLeaders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\OurLeaders.aspx.designer.cs">
+      <DependentUpon>OurLeaders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\photo.aspx.cs">
+      <DependentUpon>photo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\photo.aspx.designer.cs">
+      <DependentUpon>photo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\tintuc.aspx.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\tintuc.aspx.designer.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\video.aspx.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\video.aspx.designer.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ucFooter.ascx.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucFooter.ascx.designer.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucTop.ascx.cs">
+      <DependentUpon>ucTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucTop.ascx.designer.cs">
+      <DependentUpon>ucTop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucAboutMain.ascx.cs">
+      <DependentUpon>ucAboutMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucAboutMain.ascx.designer.cs">
+      <DependentUpon>ucAboutMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucbanlanhdao.ascx.cs">
+      <DependentUpon>ucbanlanhdao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucbanlanhdao.ascx.designer.cs">
+      <DependentUpon>ucbanlanhdao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumb.ascx.cs">
+      <DependentUpon>ucBreadcumb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumb.ascx.designer.cs">
+      <DependentUpon>ucBreadcumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumbMEDIA.ascx.cs">
+      <DependentUpon>ucBreadcumbMEDIA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumbMEDIA.ascx.designer.cs">
+      <DependentUpon>ucBreadcumbMEDIA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucHistory.ascx.cs">
+      <DependentUpon>ucHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucHistory.ascx.designer.cs">
+      <DependentUpon>ucHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuBottom.ascx.cs">
+      <DependentUpon>ucMenuBottom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuBottom.ascx.designer.cs">
+      <DependentUpon>ucMenuBottom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuSideEN.ascx.cs">
+      <DependentUpon>ucMenuSideEN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuSideEN.ascx.designer.cs">
+      <DependentUpon>ucMenuSideEN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuTop.ascx.cs">
+      <DependentUpon>ucMenuTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuTop.ascx.designer.cs">
+      <DependentUpon>ucMenuTop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsBreadCumb.ascx.cs">
+      <DependentUpon>ucNewsBreadCumb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsBreadCumb.ascx.designer.cs">
+      <DependentUpon>ucNewsBreadCumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail.ascx.cs">
+      <DependentUpon>ucNewsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail.ascx.designer.cs">
+      <DependentUpon>ucNewsDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail2.ascx.cs">
+      <DependentUpon>ucNewsDetail2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail2.ascx.designer.cs">
+      <DependentUpon>ucNewsDetail2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsList.ascx.cs">
+      <DependentUpon>ucNewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsList.ascx.designer.cs">
+      <DependentUpon>ucNewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsListMain.ascx.cs">
+      <DependentUpon>ucNewsListMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsListMain.ascx.designer.cs">
+      <DependentUpon>ucNewsListMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsRelated.ascx.cs">
+      <DependentUpon>ucNewsRelated.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsRelated.ascx.designer.cs">
+      <DependentUpon>ucNewsRelated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPanoSlideFullWidth.ascx.cs">
+      <DependentUpon>ucPanoSlideFullWidth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPanoSlideFullWidth.ascx.designer.cs">
+      <DependentUpon>ucPanoSlideFullWidth.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPhoto.ascx.cs">
+      <DependentUpon>ucPhoto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPhoto.ascx.designer.cs">
+      <DependentUpon>ucPhoto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucProductMain.ascx.cs">
+      <DependentUpon>ucProductMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucProductMain.ascx.designer.cs">
+      <DependentUpon>ucProductMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopBar_KH.ascx.cs">
+      <DependentUpon>ucTopBar_KH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopBar_KH.ascx.designer.cs">
+      <DependentUpon>ucTopBar_KH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopHeading.ascx.cs">
+      <DependentUpon>ucTopHeading.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopHeading.ascx.designer.cs">
+      <DependentUpon>ucTopHeading.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucVideo.ascx.cs">
+      <DependentUpon>ucVideo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucVideo.ascx.designer.cs">
+      <DependentUpon>ucVideo.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="wp-content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wp-content\fonts\fontawesome-webfont.woff" />
+    <Content Include="wp-content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wp-content\Roboto_Condensed\RobotoCondensed-Regular.ttf" />
+    <Content Include="wp-content\fonts\flaticon.eot" />
+    <Content Include="wp-content\fonts\flaticon.ttf" />
+    <Content Include="wp-content\fonts\flaticon.woff" />
+    <Content Include="wp-content\fonts\flaticond41d.eot" />
+    <Content Include="wp-content\fonts\fontawesome-webfont914c.eot" />
+    <Content Include="wp-content\fonts\fontawesome-webfont914c.ttf" />
+    <Content Include="wp-content\fonts\fontawesome-webfont914c.woff" />
+    <Content Include="wp-content\fonts\fontawesome-webfont914c.woff2" />
+    <Content Include="wp-content\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="wp-content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wp-content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wp-content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wp-content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wp-content\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="wp-content\fonts\font-awesome\fontawesome-webfont3e6e.eot" />
+    <Content Include="wp-content\fonts\font-awesome\fontawesome-webfont3e6e.ttf" />
+    <Content Include="wp-content\fonts\font-awesome\fontawesome-webfont3e6e.woff" />
+    <Content Include="wp-content\fonts\font-awesome\fontawesome-webfont3e6e.woff2" />
+    <Content Include="wp-content\fonts\font-awesome\fontawesome-webfontd41d.eot" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Config_MenuTop.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Config_MenuTop.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pvn.BL\Pvn.BL.csproj">
+      <Project>{7d748087-b470-4596-8aca-e072b3521818}</Project>
+      <Name>Pvn.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.DA\Pvn.DA.csproj">
+      <Project>{a5ba1342-542d-404a-8f40-d89e8063c971}</Project>
+      <Name>Pvn.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Entity\Pvn.Entity.csproj">
+      <Project>{32ab2a10-a17f-4a0c-8c97-4f0553a8f353}</Project>
+      <Name>Pvn.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Utils\Pvn.Utils.csproj">
+      <Project>{5ee6bcc3-6351-47ad-9b7f-f20dc6d51770}</Project>
+      <Name>Pvn.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62738</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60219/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

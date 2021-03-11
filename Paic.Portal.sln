@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Paic.CommonLib", "Paic.CommonLib", "{51910E41-965F-4F67-9074-EA0CC396CA61}"
+	ProjectSection(SolutionItems) = preProject
+		Paic.CommonLib\HtmlToOpenXml.dll = Paic.CommonLib\HtmlToOpenXml.dll
+		Paic.CommonLib\Microsoft.SharePoint.dll = Paic.CommonLib\Microsoft.SharePoint.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pvn.Utils", "Pvn.Utils\Pvn.Utils.csproj", "{5EE6BCC3-6351-47AD-9B7F-F20DC6D51770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pvn.BL", "Pvn.BL\Pvn.BL.csproj", "{7D748087-B470-4596-8ACA-E072B3521818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pvn.DA", "Pvn.DA\Pvn.DA.csproj", "{A5BA1342-542D-404A-8F40-D89E8063C971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pvn.Entity", "Pvn.Entity\Pvn.Entity.csproj", "{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pvn.Web", "Pvn.Web\Pvn.Web.csproj", "{70C3B986-34E3-40CC-8E44-B223E55C6CC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dll", "dll", "{D20149F4-4514-4E56-91C1-A18D643298C7}"
+	ProjectSection(SolutionItems) = preProject
+		dll\CommonLib.Application.dll = dll\CommonLib.Application.dll
+		dll\DocumentFormat.OpenXml.dll = dll\DocumentFormat.OpenXml.dll
+		dll\HtmlToOpenXml.dll = dll\HtmlToOpenXml.dll
+		..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.dll = ..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.dll
+		..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.OOXML.dll = ..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.OOXML.dll
+		..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.OpenXml4Net.dll = ..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.OpenXml4Net.dll
+		..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.OpenXmlFormats.dll = ..\ConvertDataTDKT_svn\ConvertDataTDKT_svn\ConvertSQLToSharepoint\bin\Debug\NPOI.OpenXmlFormats.dll
+		dll\Pvn.BL.dll = dll\Pvn.BL.dll
+		dll\Pvn.BL.pdb = dll\Pvn.BL.pdb
+		dll\Pvn.DA.dll = dll\Pvn.DA.dll
+		dll\Pvn.DA.pdb = dll\Pvn.DA.pdb
+		dll\Pvn.Entity.dll = dll\Pvn.Entity.dll
+		dll\Pvn.Entity.pdb = dll\Pvn.Entity.pdb
+		dll\Pvn.Web.dll = dll\Pvn.Web.dll
+		dll\Pvn.Web.dll.config = dll\Pvn.Web.dll.config
+		dll\Pvn.Web.pdb = dll\Pvn.Web.pdb
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intraweb.Webpart", "Intraweb.Webpart\Intraweb.Webpart.csproj", "{AB3857E8-836E-40EB-9D7D-9A53EE959E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internet.Webpart", "Internet.Webpart\Internet.Webpart.csproj", "{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet_EN.webpart", "Intranet_EN.webpart\Intranet_EN.webpart.csproj", "{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminLTE", "AdminLTE\AdminLTE.csproj", "{9D6DF842-939D-4F90-AB61-5986788FC82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileBrowser", "FileBrowser\FileBrowser.csproj", "{B4686551-B67D-4D14-816A-BA96F77847FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PvnEN.Web", "PvnEN.Web\PvnEN.Web.csproj", "{74CBCF33-2045-4B3F-93DF-05538BA57556}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EE6BCC3-6351-47AD-9B7F-F20DC6D51770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE6BCC3-6351-47AD-9B7F-F20DC6D51770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE6BCC3-6351-47AD-9B7F-F20DC6D51770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE6BCC3-6351-47AD-9B7F-F20DC6D51770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D748087-B470-4596-8ACA-E072B3521818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D748087-B470-4596-8ACA-E072B3521818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D748087-B470-4596-8ACA-E072B3521818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D748087-B470-4596-8ACA-E072B3521818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5BA1342-542D-404A-8F40-D89E8063C971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BA1342-542D-404A-8F40-D89E8063C971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BA1342-542D-404A-8F40-D89E8063C971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BA1342-542D-404A-8F40-D89E8063C971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C3B986-34E3-40CC-8E44-B223E55C6CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C3B986-34E3-40CC-8E44-B223E55C6CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C3B986-34E3-40CC-8E44-B223E55C6CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C3B986-34E3-40CC-8E44-B223E55C6CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3857E8-836E-40EB-9D7D-9A53EE959E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3857E8-836E-40EB-9D7D-9A53EE959E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3857E8-836E-40EB-9D7D-9A53EE959E68}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB3857E8-836E-40EB-9D7D-9A53EE959E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3857E8-836E-40EB-9D7D-9A53EE959E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3857E8-836E-40EB-9D7D-9A53EE959E68}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E715DAEF-D91A-44F6-A2A8-26A7BBB35F07}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9D6DF842-939D-4F90-AB61-5986788FC82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6DF842-939D-4F90-AB61-5986788FC82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6DF842-939D-4F90-AB61-5986788FC82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6DF842-939D-4F90-AB61-5986788FC82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4686551-B67D-4D14-816A-BA96F77847FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4686551-B67D-4D14-816A-BA96F77847FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4686551-B67D-4D14-816A-BA96F77847FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4686551-B67D-4D14-816A-BA96F77847FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CBCF33-2045-4B3F-93DF-05538BA57556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CBCF33-2045-4B3F-93DF-05538BA57556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CBCF33-2045-4B3F-93DF-05538BA57556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CBCF33-2045-4B3F-93DF-05538BA57556}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A1FB456-3372-4993-8606-0315DDABCFD8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="wpScheduleInformationV2UserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="wpScheduleInformationV2\" Type="ElementManifest" />
+    <ProjectItemFile Source="wpScheduleInformationV2.webpart" Target="wpScheduleInformationV2\" Type="ElementFile" />
+    <ProjectItemFile Source="wpScheduleInformationV2UserControl.ascx" Target="CONTROLTEMPLATES\Intraweb.Webpart\wpScheduleInformationV2\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Intraweb.Webpart.wpScheduleInformationV2" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

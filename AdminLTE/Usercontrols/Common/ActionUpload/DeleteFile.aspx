@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeleteFile.aspx.cs" Inherits="AdminLTE.Usercontrols.Common.ActionUpload.DeleteFile" %>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pvn.Entity</RootNamespace>
+    <AssemblyName>Pvn.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>..\..\ThiDuaKhenThuong\packages\NEST.1.7.0\lib\net45\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\AdminLTE\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseET.cs" />
+    <Compile Include="CMSNewsPublishingET.cs" />
+    <Compile Include="CMS_AdvertisementET.cs" />
+    <Compile Include="CMS_BannerQuangCaoET.cs" />
+    <Compile Include="CMS_CategoryET.cs" />
+    <Compile Include="CMS_CompanyChartET.cs" />
+    <Compile Include="CMS_CompanyET.cs" />
+    <Compile Include="CMS_CompanyJobTitleET.cs" />
+    <Compile Include="CMS_ContactDetailET.cs" />
+    <Compile Include="CMS_ContactTypeET.cs" />
+    <Compile Include="CMS_EventET.cs" />
+    <Compile Include="CMS_ImageCategoryET.cs" />
+    <Compile Include="CMS_ImageET.cs" />
+    <Compile Include="CMS_JobTitleET.cs" />
+    <Compile Include="CMS_ListManagerET.cs" />
+    <Compile Include="CMS_ListManagerTypeET.cs" />
+    <Compile Include="CMS_MeetingET.cs" />
+    <Compile Include="CMS_MenuET.cs" />
+    <Compile Include="CMS_NewsET.cs" />
+    <Compile Include="CMS_NewsPubET.cs" />
+    <Compile Include="CMS_News_KeywordET.cs" />
+    <Compile Include="CMS_RoomET.cs" />
+    <Compile Include="CMS_ScheduleManagerET.cs" />
+    <Compile Include="CMS_SchedulesET.cs" />
+    <Compile Include="CMS_SlideShowImgET.cs" />
+    <Compile Include="CMS_VideoCategoryET.cs" />
+    <Compile Include="CMS_VideoET.cs" />
+    <Compile Include="CMS_WorkerET.cs" />
+    <Compile Include="ContactsET.cs" />
+    <Compile Include="DepartmentDetailET.cs" />
+    <Compile Include="DocInfo.cs" />
+    <Compile Include="DocInfoDetail.cs" />
+    <Compile Include="Doc_DonViBanHanhET.cs" />
+    <Compile Include="Doc_LinhVucVanBanET.cs" />
+    <Compile Include="Doc_LoaiVanBanET.cs" />
+    <Compile Include="Doc_VanBanET.cs" />
+    <Compile Include="EventInfo.cs" />
+    <Compile Include="FileAttachForm.cs" />
+    <Compile Include="GroupedLichCongTacET.cs" />
+    <Compile Include="LanhDaoInfo.cs" />
+    <Compile Include="MeetingMobileET.cs" />
+    <Compile Include="NewsInfoContent.cs" />
+    <Compile Include="NgonNguET.cs" />
+    <Compile Include="PhoneDetailET.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleET.cs" />
+    <Compile Include="ScheduleForManagerET.cs" />
+    <Compile Include="ScheduleInfo.cs" />
+    <Compile Include="ScheduleInfoDetail.cs" />
+    <Compile Include="Sys_FileBinary.cs" />
+    <Compile Include="WFWorkflowET.cs" />
+    <Compile Include="WFWorkflowTemplateET.cs" />
+    <Compile Include="WorkerDetailET.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pvn.Utils\Pvn.Utils.csproj">
+      <Project>{5ee6bcc3-6351-47ad-9b7f-f20dc6d51770}</Project>
+      <Name>Pvn.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

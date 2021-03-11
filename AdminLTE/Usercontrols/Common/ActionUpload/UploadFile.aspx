@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UploadFile.aspx.cs" Inherits="AdminLTE.Usercontrols.Common.ActionUpload.UploadFile" %>

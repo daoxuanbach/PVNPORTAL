@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="wpWeb_History" List="113" Url="_catalogs/wp">
+    <File Path="wpWeb_History\wpWeb_History.webpart" Url="Intranet_EN.webpart_wpWeb_History.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

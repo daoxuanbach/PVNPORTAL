@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PvnEN.Web.Site" %>
+
+
+<%@ Register Src="~/Usercontrols_EN/ucMenuBottom.ascx" TagPrefix="uc1" TagName="ucMenuBottom" %>
+<%@ Register Src="~/Usercontrols_EN/ucTopHeading.ascx" TagPrefix="uc1" TagName="ucTopHeading" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Css-->
+    <link href="/wp-content/logo.png" rel="shortcut icon" type="image/x-icon">
+    <!--jQuery-->
+    <script src="/wp-content/js/jquery.min.js"></script>
+    <!--dist.en.css-->
+    <link href="/wp-content/css/dist.en.css" rel="stylesheet">
+    <!--Bootstrap css-->
+    <link href="/wp-content/css/bootstrap.min.css" rel="stylesheet">
+    <!--Animate Css-->
+    <link href="/wp-content/css/animate.css" rel="stylesheet">
+    <!--Slick js-->
+    <script src="/wp-content/js/slick.min.js"></script>
+    <!--Owlcarousel css-->
+    <link rel="stylesheet" href="/wp-content/css/owl.carousel.min.css">
+    <!--Slick Css-->
+    <link href="/wp-content/css/slick.css" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/wp-content/css/font-awesome.min.css">
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="/wp-content/css/jquery-ui.css">
+    <!--jQuery ui js-->
+    <script src="/wp-content/js/jquery-ui.js"></script>
+    <!--Custom js-->
+    <script src="/wp-content/js/custom.js"></script>
+    <!--Magnific Popup-->
+    <link href="/wp-content/css/magnific-popup.css" rel="stylesheet">
+    <script src="/wp-content/js/jquery.magnific-popup.js"></script>
+    <!--Style Css-->
+    <link href="/wp-content/css/style.css" rel="stylesheet" type="text/css">
+    <!--Custom Css-->
+    <link href="/wp-content/css/custom.css" rel="stylesheet" type="text/css">
+    <!--Toast -->
+    <link rel='stylesheet' href="/wp-content/css/flaticon.css" type='text/css' media='all' />
+    <!--Toast js-->
+    <script src="/wp-content/js/toast.js"></script>
+   
+     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
+
+     <script src="/wp-includes/js/index.js"></script>
+     <link rel='stylesheet' href='/wp-content/fonts/font-awesome/font-awesome1845.css?ver=4.9.6' type='text/css' media='all' />
+</head>
+
+<body class="loaded 1" style="">
+    
+    <uc1:ucTopHeading runat="server" ID="ucTopHeading" />
+
+ 
+    <div class="main-content-wrap page-new-event">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <uc1:ucMenuBottom runat="server" ID="ucMenuBottom" />
+
+
+<script type="text/javascript" src="/wp-content/js/dist.en.js"></script>
+<script type='text/javascript' src="/wp-includes/js/counto/jquery.appear.min5152.js"></script>
+<script type='text/javascript' src="/wp-includes/js/counto/jquery.counto.min5152.js"></script>
+<script type='text/javascript' src="/wp-includes/js/counto/chart3ba1.js"></script>
+</body>
+</html>

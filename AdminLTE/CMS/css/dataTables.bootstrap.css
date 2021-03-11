@@ -1,0 +1,45 @@
+div.dataTables_filter {
+	text-align: left;
+    margin-bottom: 8px
+}
+
+div.dataTables_filter label {
+	font-weight: normal;
+	white-space: nowrap;
+	text-align: left;
+}
+
+div.dataTables_filter input {
+	margin-left: 0.5em;
+	display: inline-block;
+	width: auto;
+}
+
+
+div.dataTables_paginate {
+	margin: 0;
+	white-space: nowrap;
+	text-align: right;
+}
+
+div.dataTables_paginate ul.pagination {
+	margin: 2px 0;
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+	div.dataTables_wrapper > div.row > div,
+	div.dataTables_length,
+	div.dataTables_filter,
+	div.dataTables_info,
+	div.dataTables_paginate {
+		text-align: center;
+     
+	}
+
+	div.DTTT {
+		margin-bottom: 0.5em;
+	}
+}
+
+

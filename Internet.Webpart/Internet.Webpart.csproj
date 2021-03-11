@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2663D04-F7CB-4AB9-B69B-D7B020F341A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Internet.Webpart</RootNamespace>
+    <AssemblyName>Internet.Webpart</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint">
+      <HintPath>..\dll\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wpChuyenDeDauKhi\ChuyenDeDauKhiProperties.cs" />
+    <Compile Include="wpChuyenDeDauKhi\wpChuyenDeDauKhi.cs" />
+    <Compile Include="wpDocBao\wpDocBao.cs" />
+    <Compile Include="wpLienKetNhanh\LienKetNhanhProperties.cs" />
+    <Compile Include="wpLienKetNhanh\wpLienKetNhanh.cs" />
+    <Compile Include="wpMenuAnhLienKet\MenuAnhLienKetProperties.cs" />
+    <Compile Include="wpMenuAnhLienKet\wpMenuAnhLienKet.cs" />
+    <Compile Include="wpNewsDetailComment\wpNewsDetailComment.cs" />
+    <Compile Include="wpNewsInfo\NewsInfoProperties.cs" />
+    <Compile Include="wpNewsInfo\wpNewsInfo.cs" />
+    <Compile Include="wpNewsList\NewsListProperties.cs" />
+    <Compile Include="wpNewsList\wpNewsList.cs" />
+    <Compile Include="wpNewsMain\CMS_CategoryBL.cs" />
+    <Compile Include="wpNewsMain\ToolpartNewsMain.cs" />
+    <Compile Include="wpNewsMain\wpNewsMain.cs" />
+    <Compile Include="wpSearchbox\wpSearchbox.cs" />
+    <Compile Include="wp_BannerWeb\wp_BannerWeb.cs" />
+    <Compile Include="wp_LanhDaoPVN\wp_LanhDaoPVN.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{6a15dcde-076d-4d15-9c49-cdcd9992b0e9}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{fa9ded67-1d95-41f4-8c10-d4dacf90585d}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="wpChuyenDeDauKhi\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b3b19b84-7549-4887-b1a0-183fec60fa11}</SharePointProjectItemId>
+    </None>
+    <None Include="wpChuyenDeDauKhi\wpChuyenDeDauKhi.webpart" />
+    <None Include="wpDocBao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{210f5da9-bc58-4bc9-b1dc-bbbd04dc9fe2}</SharePointProjectItemId>
+    </None>
+    <None Include="wpDocBao\wpDocBao.webpart" />
+    <None Include="wpLienKetNhanh\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4cb5336c-51a5-4200-917f-fb62137e229e}</SharePointProjectItemId>
+    </None>
+    <None Include="wpLienKetNhanh\wpLienKetNhanh.webpart" />
+    <None Include="wpMenuAnhLienKet\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{340d3977-d0fa-4d4a-989c-7879785947a5}</SharePointProjectItemId>
+    </None>
+    <None Include="wpMenuAnhLienKet\wpMenuAnhLienKet.webpart" />
+    <None Include="wpNewsDetailComment\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dbbe4aad-c783-446b-9f28-67c3d13bc123}</SharePointProjectItemId>
+    </None>
+    <None Include="wpNewsDetailComment\wpNewsDetailComment.webpart" />
+    <None Include="wpNewsInfo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fe50e712-608a-4a83-9991-5c6e1e24a5e9}</SharePointProjectItemId>
+    </None>
+    <None Include="wpNewsInfo\wpNewsInfo.webpart" />
+    <None Include="wpNewsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e62de532-d957-475d-afc2-0a436addde31}</SharePointProjectItemId>
+    </None>
+    <None Include="wpNewsList\wpNewsList.webpart" />
+    <None Include="wpNewsMain\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ad296287-4a71-4ff6-a4ca-0be24113db4a}</SharePointProjectItemId>
+    </None>
+    <None Include="wpNewsMain\wpNewsMain.webpart" />
+    <None Include="wpSearchbox\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{66b1c647-24e8-412f-8de4-082bec2ea776}</SharePointProjectItemId>
+    </None>
+    <None Include="wpSearchbox\wpSearchbox.webpart" />
+    <None Include="wp_BannerWeb\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9a4dd05c-f992-41fc-8533-1d06be4f0317}</SharePointProjectItemId>
+    </None>
+    <None Include="wp_BannerWeb\wp_BannerWeb.webpart" />
+    <None Include="wp_LanhDaoPVN\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c99ddd83-b771-4518-a4db-3cadd217a579}</SharePointProjectItemId>
+    </None>
+    <None Include="wp_LanhDaoPVN\wp_LanhDaoPVN.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="wpChuyenDeDauKhi\Elements.xml" />
+    <Content Include="wpDocBao\Elements.xml" />
+    <Content Include="wpLienKetNhanh\Elements.xml" />
+    <Content Include="wpMenuAnhLienKet\Elements.xml" />
+    <Content Include="wpNewsDetailComment\Elements.xml" />
+    <Content Include="wpNewsInfo\Elements.xml" />
+    <Content Include="wpNewsList\Elements.xml" />
+    <Content Include="wpNewsMain\Elements.xml" />
+    <Content Include="wpSearchbox\Elements.xml" />
+    <Content Include="wp_BannerWeb\Elements.xml" />
+    <Content Include="wp_LanhDaoPVN\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pvn.BL\Pvn.BL.csproj">
+      <Project>{7d748087-b470-4596-8aca-e072b3521818}</Project>
+      <Name>Pvn.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Entity\Pvn.Entity.csproj">
+      <Project>{32ab2a10-a17f-4a0c-8c97-4f0553a8f353}</Project>
+      <Name>Pvn.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Utils\Pvn.Utils.csproj">
+      <Project>{5ee6bcc3-6351-47ad-9b7f-f20dc6d51770}</Project>
+      <Name>Pvn.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Web\Pvn.Web.csproj">
+      <Project>{70c3b986-34e3-40cc-8e44-b223e55c6cc5}</Project>
+      <Name>Pvn.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

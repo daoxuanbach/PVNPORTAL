@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70C3B986-34E3-40CC-8E44-B223E55C6CC5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pvn.Web</RootNamespace>
+    <AssemblyName>Pvn.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.4.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonLib.Application">
+      <HintPath>..\dll\CommonLib.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlToOpenXml">
+      <HintPath>..\Paic.CommonLib\HtmlToOpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Datastore\Contacts\NguyenQuocKhanh.jpg" />
+    <Content Include="packages.config" />
+    <Content Include="key.snk" />
+    <Content Include="Usercontrols\Comment.ascx" />
+    <Content Include="Usercontrols\ContentComment.ascx" />
+    <Content Include="Usercontrols\ucBanner.ascx" />
+    <Content Include="Usercontrols\ucBannerWeb.ascx" />
+    <Content Include="Usercontrols\ucDocBao.ascx" />
+    <Content Include="Usercontrols\ucLanhDaoPVN.ascx" />
+    <Content Include="Usercontrols\ucMenuAnhLienKet.ascx" />
+    <Content Include="Usercontrols\ucChuyenDeDauKhi.ascx" />
+    <Content Include="Usercontrols\ucImagesMain.ascx" />
+    <Content Include="Usercontrols\ucImagesVideoMain.ascx" />
+    <Content Include="Usercontrols\ucInternetNewsRelatedV2.ascx" />
+    <Content Include="Usercontrols\ucLienKetHome.ascx" />
+    <Content Include="Usercontrols\ucLienKetNhanh.ascx" />
+    <Content Include="Usercontrols\ucMainMenuImgSlide.ascx" />
+    <Content Include="Usercontrols\ucNewsDetailComment.ascx" />
+    <Content Include="Usercontrols\ucNewsInfo.ascx" />
+    <Content Include="Usercontrols\ucNewsList.ascx" />
+    <Content Include="Usercontrols\ucNewsMain.ascx" />
+    <Content Include="Usercontrols\ucSearchbox.ascx" />
+    <Content Include="Usercontrols\ucVideoMain.ascx" />
+    <Content Include="Usercontrols\webMenuSide.ascx" />
+    <Content Include="Usercontrols\WebService\wsIntra.asmx" />
+    <Content Include="Usercontrols\GetCaptcha.ashx" />
+    <Content Include="Usercontrols\WebService\GetNewsByCateID.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReportTemp\ExportScheduleForManager.xls" />
+    <Content Include="ReportTemp\ExportScheduleForManagerWeek.xls" />
+    <Content Include="Usercontrols\ExportPVNPhoneBook.aspx" />
+    <Content Include="PVNPhoneBook.aspx" />
+    <Content Include="Usercontrols\ExportScheduleForManagerWeek.aspx" />
+    <Content Include="Usercontrols\ExportScheduleForManager.aspx" />
+    <Content Include="Usercontrols\ScheduleDayView.ascx" />
+    <Content Include="Usercontrols\ucPhoneBook.ascx" />
+    <Content Include="Usercontrols\wpDocumentListUserControl.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codes\CaptchaHelper.cs" />
+    <Compile Include="Codes\RenderNewsContent.cs" />
+    <Compile Include="Codes\ReportLichCongtac.cs" />
+    <Compile Include="ExcelUtils.cs" />
+    <Compile Include="Usercontrols\Comment.ascx.cs">
+      <DependentUpon>Comment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\Comment.ascx.designer.cs">
+      <DependentUpon>Comment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ContentComment.ascx.cs">
+      <DependentUpon>ContentComment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ContentComment.ascx.designer.cs">
+      <DependentUpon>ContentComment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\GetCaptcha.ashx.cs">
+      <DependentUpon>GetCaptcha.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucBanner.ascx.cs">
+      <DependentUpon>ucBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucBanner.ascx.designer.cs">
+      <DependentUpon>ucBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucBannerWeb.ascx.cs">
+      <DependentUpon>ucBannerWeb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucBannerWeb.ascx.designer.cs">
+      <DependentUpon>ucBannerWeb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucDocBao.ascx.cs">
+      <DependentUpon>ucDocBao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucDocBao.ascx.designer.cs">
+      <DependentUpon>ucDocBao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucLanhDaoPVN.ascx.cs">
+      <DependentUpon>ucLanhDaoPVN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucLanhDaoPVN.ascx.designer.cs">
+      <DependentUpon>ucLanhDaoPVN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucMenuAnhLienKet.ascx.cs">
+      <DependentUpon>ucMenuAnhLienKet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucMenuAnhLienKet.ascx.designer.cs">
+      <DependentUpon>ucMenuAnhLienKet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ExportPVNPhoneBook.aspx.cs">
+      <DependentUpon>ExportPVNPhoneBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ExportPVNPhoneBook.aspx.designer.cs">
+      <DependentUpon>ExportPVNPhoneBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PVNPhoneBook.aspx.cs">
+      <DependentUpon>PVNPhoneBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PVNPhoneBook.aspx.designer.cs">
+      <DependentUpon>PVNPhoneBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usercontrols\ExportScheduleForManagerWeek.aspx.cs">
+      <DependentUpon>ExportScheduleForManagerWeek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ExportScheduleForManagerWeek.aspx.designer.cs">
+      <DependentUpon>ExportScheduleForManagerWeek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ExportScheduleForManager.aspx.cs">
+      <DependentUpon>ExportScheduleForManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ExportScheduleForManager.aspx.designer.cs">
+      <DependentUpon>ExportScheduleForManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ScheduleDayView.ascx.cs">
+      <DependentUpon>ScheduleDayView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ScheduleDayView.ascx.designer.cs">
+      <DependentUpon>ScheduleDayView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucChuyenDeDauKhi.ascx.cs">
+      <DependentUpon>ucChuyenDeDauKhi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucChuyenDeDauKhi.ascx.designer.cs">
+      <DependentUpon>ucChuyenDeDauKhi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucImagesMain.ascx.cs">
+      <DependentUpon>ucImagesMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucImagesMain.ascx.designer.cs">
+      <DependentUpon>ucImagesMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucImagesVideoMain.ascx.cs">
+      <DependentUpon>ucImagesVideoMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucImagesVideoMain.ascx.designer.cs">
+      <DependentUpon>ucImagesVideoMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucInternetNewsRelatedV2.ascx.cs">
+      <DependentUpon>ucInternetNewsRelatedV2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucInternetNewsRelatedV2.ascx.designer.cs">
+      <DependentUpon>ucInternetNewsRelatedV2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucLienKetHome.ascx.cs">
+      <DependentUpon>ucLienKetHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucLienKetHome.ascx.designer.cs">
+      <DependentUpon>ucLienKetHome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucLienKetNhanh.ascx.cs">
+      <DependentUpon>ucLienKetNhanh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucLienKetNhanh.ascx.designer.cs">
+      <DependentUpon>ucLienKetNhanh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucMainMenuImgSlide.ascx.cs">
+      <DependentUpon>ucMainMenuImgSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucMainMenuImgSlide.ascx.designer.cs">
+      <DependentUpon>ucMainMenuImgSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsDetailComment.ascx.cs">
+      <DependentUpon>ucNewsDetailComment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsDetailComment.ascx.designer.cs">
+      <DependentUpon>ucNewsDetailComment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsInfo.ascx.cs">
+      <DependentUpon>ucNewsInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsInfo.ascx.designer.cs">
+      <DependentUpon>ucNewsInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsList.ascx.cs">
+      <DependentUpon>ucNewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsList.ascx.designer.cs">
+      <DependentUpon>ucNewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsMain.ascx.cs">
+      <DependentUpon>ucNewsMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucNewsMain.ascx.designer.cs">
+      <DependentUpon>ucNewsMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucPhoneBook.ascx.cs">
+      <DependentUpon>ucPhoneBook.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucPhoneBook.ascx.designer.cs">
+      <DependentUpon>ucPhoneBook.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucSearchbox.ascx.cs">
+      <DependentUpon>ucSearchbox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucSearchbox.ascx.designer.cs">
+      <DependentUpon>ucSearchbox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ucVideoMain.ascx.cs">
+      <DependentUpon>ucVideoMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ucVideoMain.ascx.designer.cs">
+      <DependentUpon>ucVideoMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\webMenuSide.ascx.cs">
+      <DependentUpon>webMenuSide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\webMenuSide.ascx.designer.cs">
+      <DependentUpon>webMenuSide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\WebService\GetNewsByCateID.ashx.cs">
+      <DependentUpon>GetNewsByCateID.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\WebService\wsIntra.asmx.cs">
+      <DependentUpon>wsIntra.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\wpDocumentListUserControl.ascx.cs">
+      <DependentUpon>wpDocumentListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\wpDocumentListUserControl.ascx.designer.cs">
+      <DependentUpon>wpDocumentListUserControl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pvn.BL\Pvn.BL.csproj">
+      <Project>{7d748087-b470-4596-8aca-e072b3521818}</Project>
+      <Name>Pvn.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.DA\Pvn.DA.csproj">
+      <Project>{a5ba1342-542d-404a-8f40-d89e8063c971}</Project>
+      <Name>Pvn.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Entity\Pvn.Entity.csproj">
+      <Project>{32ab2a10-a17f-4a0c-8c97-4f0553a8f353}</Project>
+      <Name>Pvn.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Utils\Pvn.Utils.csproj">
+      <Project>{5ee6bcc3-6351-47ad-9b7f-f20dc6d51770}</Project>
+      <Name>Pvn.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60187</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60168/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

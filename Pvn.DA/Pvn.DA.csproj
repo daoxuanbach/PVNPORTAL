@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5BA1342-542D-404A-8F40-D89E8063C971}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pvn.DA</RootNamespace>
+    <AssemblyName>Pvn.DA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Nest">
+      <HintPath>..\packages\NEST.1.7.1\lib\net45\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>App.settings</DependentUpon>
+    </Compile>
+    <Compile Include="CMSNewsPublishingDA.cs" />
+    <Compile Include="CMS_AdvertisementDA.cs" />
+    <Compile Include="CMS_BannerQuangCaoDA.cs" />
+    <Compile Include="CMS_CategoryDA.cs" />
+    <Compile Include="CMS_CompanyChartDA.cs" />
+    <Compile Include="CMS_CompanyDA.cs" />
+    <Compile Include="CMS_CompanyJobTitleDA.cs" />
+    <Compile Include="CMS_ContactDetailDA.cs" />
+    <Compile Include="CMS_ContactTypeDA.cs" />
+    <Compile Include="CMS_EventDA.cs" />
+    <Compile Include="CMS_ImageCategoryDA.cs" />
+    <Compile Include="CMS_ImageDA.cs" />
+    <Compile Include="CMS_JobTitleDA.cs" />
+    <Compile Include="CMS_ListManagerDA.cs" />
+    <Compile Include="CMS_ListManagerTypeDA.cs" />
+    <Compile Include="CMS_MeetingDA.cs" />
+    <Compile Include="CMS_MenuDA.cs" />
+    <Compile Include="CMS_NewsCommentDA.cs" />
+    <Compile Include="CMS_NewsDA.cs" />
+    <Compile Include="CMS_News_KeywordDA.cs" />
+    <Compile Include="CMS_RoomDA.cs" />
+    <Compile Include="CMS_ScheduleManagerDA.cs" />
+    <Compile Include="CMS_SchedulesDA.cs" />
+    <Compile Include="CMS_SlideShowImgDA.cs" />
+    <Compile Include="CMS_VideoCategoryDA.cs" />
+    <Compile Include="CMS_VideoDA.cs" />
+    <Compile Include="CMS_WorkerDA.cs" />
+    <Compile Include="CommentDA.cs" />
+    <Compile Include="CompanyDA.cs" />
+    <Compile Include="DataAccessException.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="DocumentDA.cs" />
+    <Compile Include="Doc_DonViBanHanhDA.cs" />
+    <Compile Include="Doc_LinhVucVanBanDA.cs" />
+    <Compile Include="Doc_LoaiVanBanDA.cs" />
+    <Compile Include="Doc_VanBanDA.cs" />
+    <Compile Include="NewsDetailDA.cs" />
+    <Compile Include="NewsInfoDA.cs" />
+    <Compile Include="EventDA.cs" />
+    <Compile Include="MeetingDA.cs" />
+    <Compile Include="Resources\DA_vi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DA_vi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertismentDA.cs" />
+    <Compile Include="ScheduleDA.cs" />
+    <Compile Include="Sys_FileBinaryDA.cs" />
+    <Compile Include="Sys_ParameterDA.cs" />
+    <Compile Include="WorkerDA.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pvn.Entity\Pvn.Entity.csproj">
+      <Project>{32AB2A10-A17F-4A0C-8C97-4F0553A8F353}</Project>
+      <Name>Pvn.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Utils\Pvn.Utils.csproj">
+      <Project>{5ee6bcc3-6351-47ad-9b7f-f20dc6d51770}</Project>
+      <Name>Pvn.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Resources\DA_vi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DA_vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="App.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>App.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMS_SlideShowImgSQL.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

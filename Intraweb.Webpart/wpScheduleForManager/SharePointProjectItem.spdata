@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="wpScheduleForManagerUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="wpScheduleForManager\" Type="ElementManifest" />
+    <ProjectItemFile Source="wpScheduleForManager.webpart" Target="wpScheduleForManager\" Type="ElementFile" />
+    <ProjectItemFile Source="wpScheduleForManagerUserControl.ascx" Target="CONTROLTEMPLATES\Intraweb.Webpart\wpScheduleForManager\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Intraweb.Webpart.wpScheduleForManager" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

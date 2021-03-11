@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74CBCF33-2045-4B3F-93DF-05538BA57556}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PvnEN.Web</RootNamespace>
+    <AssemblyName>PvnEN.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.4.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNetPager.7.4.2\lib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.aspx" />
+    <Content Include="sites\en\Pages\banlanhdao.aspx" />
+    <Content Include="sites\en\Pages\default.aspx" />
+    <Content Include="sites\en\Pages\detail.aspx" />
+    <Content Include="sites\en\Pages\detailv2.aspx" />
+    <Content Include="sites\en\Pages\detailv4.aspx" />
+    <Content Include="sites\en\Pages\detailv5.aspx" />
+    <Content Include="sites\en\Pages\gioithieu.aspx" />
+    <Content Include="sites\en\Pages\History.aspx" />
+    <Content Include="sites\en\Pages\lichsuphattrien.aspx" />
+    <Content Include="sites\en\Pages\list.aspx" />
+    <Content Include="sites\en\Pages\photo.aspx" />
+    <Content Include="sites\en\Pages\tintuc.aspx" />
+    <Content Include="sites\en\Pages\video.aspx" />
+    <Content Include="Usercontrols_EN\ucAboutMain.ascx" />
+    <Content Include="Usercontrols_EN\ucbanlanhdao.ascx" />
+    <Content Include="Usercontrols_EN\ucBreadcumb.ascx" />
+    <Content Include="Usercontrols_EN\ucBreadcumbMEDIA.ascx" />
+    <Content Include="Usercontrols_EN\ucHistory.ascx" />
+    <Content Include="Usercontrols_EN\ucMenuBottom.ascx" />
+    <Content Include="Usercontrols_EN\ucMenuSideEN.ascx" />
+    <Content Include="Usercontrols_EN\ucMenuTop.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsBreadCumb.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsDetail.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsDetail2.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsList.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsListMain.ascx" />
+    <Content Include="Usercontrols_EN\ucNewsRelated.ascx" />
+    <Content Include="Usercontrols_EN\ucPanoSlideFullWidth.ascx" />
+    <Content Include="Usercontrols_EN\ucPhoto.ascx" />
+    <Content Include="Usercontrols_EN\ucProductMain.ascx" />
+    <Content Include="Usercontrols_EN\ucTopBar_KH.ascx" />
+    <Content Include="Usercontrols_EN\ucTopHeading.ascx" />
+    <Content Include="Usercontrols_EN\ucVideo.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="wp-content\crellyslider.css" />
+    <Content Include="wp-content\plugins\insight-core\libs\kirki\modules\webfont-loader\vendor-typekit\webfontloader.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\css\js_composer.min.css" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\flickr.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\address-book.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\alarm-clock.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\anchor.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\application-image.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\arrow.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\asterisk.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\auction-hammer.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon-buzz.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon-facebook.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon-twitter.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\battery-full.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\binocular.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-excel.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-image.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-music.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-office.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-pdf.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-powerpoint.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-word.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\bookmark.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\camcorder.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\camera.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\chart-pie.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\chart.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\clock.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\control.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\fire.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\heart.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\mail.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\plus-shield.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\video.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\spinner.gif" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\toggle_close.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\toggle_open.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\js\dist\js_composer_front.min.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\js\vendors\woocommerce-add-to-cart.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\lib\waypoints\waypoints.min.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\alert.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\exclamation.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\info.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\remove.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\tick.png" />
+    <Content Include="wp-content\plugins\nuno-builder-addon\css\style1845.css" />
+    <Content Include="wp-content\plugins\nuno-builder-addon\js\gum-nuno-addon8a54.js" />
+    <Content Include="wp-content\plugins\nuno-builder-addon\js\isotope.pkgd.min001e.js" />
+    <Content Include="wp-content\plugins\nuno-builder\css\abuilder_style1845.css" />
+    <Content Include="wp-content\plugins\nuno-builder\css\animate1845.css" />
+    <Content Include="wp-content\plugins\nuno-builder\css\owl.carousel1845.css" />
+    <Content Include="wp-content\plugins\nuno-builder\css\owl.video.play.png" />
+    <Content Include="wp-content\plugins\nuno-builder\css\scroll_spy1845.css" />
+    <Content Include="wp-content\plugins\nuno-builder\font-awesome\font-awesome1845.css" />
+    <Content Include="wp-content\plugins\nuno-builder\js\chart3ba1.js" />
+    <Content Include="wp-content\plugins\nuno-builder\js\jquery.appear.min5152.js" />
+    <Content Include="wp-content\plugins\nuno-builder\js\jquery.counto.min5152.js" />
+    <Content Include="wp-content\plugins\nuno-builder\js\owl.carousel.min77e6.js" />
+    <Content Include="wp-content\themes\businext\assets\fonts\ion\font-ion.min.css" />
+    <Content Include="wp-content\themes\businext\assets\fonts\ion\ionicons.svg" />
+    <Content Include="wp-content\themes\businext\assets\images\blockquote.png" />
+    <Content Include="wp-content\themes\businext\assets\images\blog-quote-icon.png" />
+    <Content Include="wp-content\themes\businext\assets\images\box_shadow.png" />
+    <Content Include="wp-content\themes\businext\assets\images\case-study-banner.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\dark-logo.png" />
+    <Content Include="wp-content\themes\businext\assets\images\flags\de.png" />
+    <Content Include="wp-content\themes\businext\assets\images\flags\en.png" />
+    <Content Include="wp-content\themes\businext\assets\images\flags\fr.png" />
+    <Content Include="wp-content\themes\businext\assets\images\icon-document.png" />
+    <Content Include="wp-content\themes\businext\assets\images\icon-envelope-open-02.png" />
+    <Content Include="wp-content\themes\businext\assets\images\icon-envelope-open.png" />
+    <Content Include="wp-content\themes\businext\assets\images\icon-money-bag.png" />
+    <Content Include="wp-content\themes\businext\assets\images\light-logo.png" />
+    <Content Include="wp-content\themes\businext\assets\images\th_bg.png" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg-08.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg-09.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg-10.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg-blog.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg-case-study.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg-service.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-bg.jpg" />
+    <Content Include="wp-content\themes\businext\assets\images\title-bar-globe.png" />
+    <Content Include="wp-content\themes\businext\assets\js\headroom.min.js" />
+    <Content Include="wp-content\themes\businext\assets\js\main.min.js" />
+    <Content Include="wp-content\themes\businext\assets\js\woo.min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\isotope\js\isotope.pkgd.min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\matchHeight\jquery.matchHeight-min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\packery-mode\packery-mode.pkgd.min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\perfect-scrollbar\css\custom-theme.css" />
+    <Content Include="wp-content\themes\businext\assets\libs\smartmenus\jquery.smartmenus.min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\smooth-scroll-for-web\SmoothScroll.min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\smooth-scroll\jquery.smooth-scroll.min.js" />
+    <Content Include="wp-content\themes\businext\assets\libs\spinkit\spinkit.css" />
+    <Content Include="wp-content\themes\businext\assets\libs\swiper\css\swiper.min.css" />
+    <Content Include="wp-content\themes\businext\assets\libs\swiper\js\swiper.min.js" />
+    <Content Include="wp-content\themes\businext\style.min.css" />
+    <Content Include="wp-content\themes\petro\css\bootstrap46df.css" />
+    <Content Include="wp-content\themes\petro\css\flaticon.css" />
+    <Content Include="wp-content\themes\petro\css\style-site11845.css" />
+    <Content Include="wp-content\themes\petro\css\themestyle1845.css" />
+    <Content Include="wp-content\themes\petro\fonts\flaticon.svg" />
+    <Content Include="wp-content\themes\petro\fonts\fontawesome-webfont914c.svg" />
+    <Content Include="wp-content\themes\petro\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wp-content\themes\petro\fonts\petro-construction\petro-construction1845.css" />
+    <Content Include="wp-content\themes\petro\fonts\petro-construction\petro-webfontc56b.svg" />
+    <Content Include="wp-content\themes\petro\js\bootstrap.min55a0.js" />
+    <Content Include="wp-content\themes\petro\js\jquery.easing.1.34e44.js" />
+    <Content Include="wp-content\themes\petro\js\jquery.magnific-popup.min5152.js" />
+    <Content Include="wp-content\themes\petro\js\jquery.superslides5152.js" />
+    <Content Include="wp-content\themes\petro\js\modernizr.custom5152.js" />
+    <Content Include="wp-content\themes\petro\js\themescript5152.js" />
+    <Content Include="wp-content\themes\petro\style1845.css" />
+    <Content Include="wp-content\uploads\2017\06\banner-page.jpg" />
+    <Content Include="wp-content\uploads\2017\06\banner.png" />
+    <Content Include="wp-content\uploads\2017\06\banner1.png" />
+    <Content Include="wp-content\uploads\2017\06\bgoverlay-1.jpg" />
+    <Content Include="wp-content\uploads\2017\06\blog-2.jpg" />
+    <Content Include="wp-content\uploads\2017\06\blog-4-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\blog-4.jpg" />
+    <Content Include="wp-content\uploads\2017\06\blog-5-600x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\director.png" />
+    <Content Include="wp-content\uploads\2017\06\el.png" />
+    <Content Include="wp-content\uploads\2017\06\en.png" />
+    <Content Include="wp-content\uploads\2017\06\fere.jpg" />
+    <Content Include="wp-content\uploads\2017\06\fere.png" />
+    <Content Include="wp-content\uploads\2017\06\gas.png" />
+    <Content Include="wp-content\uploads\2017\06\IMG.png" />
+    <Content Include="wp-content\uploads\2017\06\imgtext.png" />
+    <Content Include="wp-content\uploads\2017\06\logo-light.png" />
+    <Content Include="wp-content\uploads\2017\06\logo-petro.png" />
+    <Content Include="wp-content\uploads\2017\06\oill.png" />
+    <Content Include="wp-content\uploads\2017\06\partners-1.png" />
+    <Content Include="wp-content\uploads\2017\06\partners-2.png" />
+    <Content Include="wp-content\uploads\2017\06\partners-3.png" />
+    <Content Include="wp-content\uploads\2017\06\partners-4.png" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-1-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-2-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-3-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-4-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-4.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-5-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-5-600x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\project-detail-5.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-2-600x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-3-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-3-600x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-4-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-4-600x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-detail-1-570x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\service-detail-1-600x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\slide-1.jpg" />
+    <Content Include="wp-content\uploads\2017\06\slide-2.jpg" />
+    <Content Include="wp-content\uploads\2017\06\slide-3.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-1-200x200.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-1-400x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-2-200x200.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-2-400x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-3-200x200.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-3-400x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-4-200x200.jpg" />
+    <Content Include="wp-content\uploads\2017\06\testimony-thumb-4-400x400.jpg" />
+    <Content Include="wp-content\uploads\2017\06\vi.png" />
+    <Content Include="wp-content\uploads\2017\08\icon.png" />
+    <Content Include="wp-content\uploads\2018\01\1959-fix.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1961.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1975-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1975.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1977.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1980.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1981-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1981.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1984.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1986.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1990.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1992.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1995.jpg" />
+    <Content Include="wp-content\uploads\2018\01\1999.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2004.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2006-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2006.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2007.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2008.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2009.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2010.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2011-2.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2011.jpg" />
+    <Content Include="wp-content\uploads\2018\01\2015.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-04-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-07-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-11-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-19-80x80.jpg" />
+    <Content Include="wp-content\uploads\2018\01\blog-20-80x80.jpg" />
+    <Content Include="wp-content\uploads\2018\01\hse.PNG" />
+    <Content Include="wp-content\uploads\2018\01\light-logo.png" />
+    <Content Include="wp-content\uploads\2018\01\pvn_tapdoan.png" />
+    <Content Include="wp-content\uploads\2018\01\service-03-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\service-07-290x160.jpg" />
+    <Content Include="wp-content\uploads\2018\01\service-sidebar-about-us-image.jpg" />
+    <Content Include="wp-content\uploads\2018\06\DinhVanSon_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenHungDung_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenTienVinh_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\NguyenVuTruongSon_BanTGD.png" />
+    <Content Include="wp-content\uploads\2018\06\PhamXuanCanh_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\PhanNgocTrung_HDTV.png" />
+    <Content Include="wp-content\uploads\2018\06\TranSyThanh_HDTV.png" />
+    <Content Include="wp-includes\img\001.jpg" />
+    <Content Include="wp-includes\img\003.jpg" />
+    <Content Include="wp-includes\img\004.jpg" />
+    <Content Include="wp-includes\img\007.jpg" />
+    <Content Include="wp-includes\img\008.jpg" />
+    <Content Include="wp-includes\img\br_1.png" />
+    <Content Include="wp-includes\img\br_bg.png" />
+    <Content Include="wp-includes\img\dvtv-100.jpg" />
+    <Content Include="wp-includes\img\dvtv-bqlda.jpg" />
+    <Content Include="wp-includes\img\dvtv-daotao.jpg" />
+    <Content Include="wp-includes\img\dvtv-duoi50.jpg" />
+    <Content Include="wp-includes\img\dvtv-tren50.jpg" />
+    <Content Include="wp-includes\img\dvtv-vpdd.jpg" />
+    <Content Include="wp-includes\img\History.png" />
+    <Content Include="wp-includes\img\icon_anh.PNG" />
+    <Content Include="wp-includes\img\icon_chrome.png" />
+    <Content Include="wp-includes\img\img1.jpg" />
+    <Content Include="wp-includes\img\img2.jpg" />
+    <Content Include="wp-includes\img\img3.jpg" />
+    <Content Include="wp-includes\img\mvctotal.png" />
+    <Content Include="wp-includes\img\news.png" />
+    <Content Include="wp-includes\img\photo.png" />
+    <Content Include="wp-includes\img\product_img.png" />
+    <Content Include="wp-includes\img\spin.svg" />
+    <Content Include="wp-includes\img\topmost-clock_w24.png" />
+    <Content Include="wp-includes\js\comment-reply.min1845.js" />
+    <Content Include="wp-includes\js\imagesloaded.min.js" />
+    <Content Include="wp-includes\js\imagesloaded.min55a0.js" />
+    <Content Include="wp-includes\js\jquery\html5lightbox.js" />
+    <Content Include="wp-includes\js\jquery\jquery-migrate.min.js" />
+    <Content Include="wp-includes\js\jquery\jquery-migrate.min330a.js" />
+    <Content Include="wp-includes\js\jquery\jquery.js" />
+    <Content Include="wp-includes\js\jquery\jqueryb8ff.js" />
+    <Content Include="wp-includes\js\jquery\ui\core.mine899.js" />
+    <Content Include="wp-includes\js\jssor.slider-27.5.0.min.js" />
+    <Content Include="wp-includes\js\wp-embed.min.js" />
+    <Content Include="wp-includes\js\wp-embed.min1845.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Config_MenuTop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Config_MenuTop.resx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PVN_EN.Master.cs">
+      <DependentUpon>PVN_EN.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PVN_EN.Master.designer.cs">
+      <DependentUpon>PVN_EN.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\banlanhdao.aspx.cs">
+      <DependentUpon>banlanhdao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\banlanhdao.aspx.designer.cs">
+      <DependentUpon>banlanhdao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv2.aspx.cs">
+      <DependentUpon>detailv2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv2.aspx.designer.cs">
+      <DependentUpon>detailv2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv4.aspx.cs">
+      <DependentUpon>detailv4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv4.aspx.designer.cs">
+      <DependentUpon>detailv4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv5.aspx.cs">
+      <DependentUpon>detailv5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\detailv5.aspx.designer.cs">
+      <DependentUpon>detailv5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\gioithieu.aspx.cs">
+      <DependentUpon>gioithieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\gioithieu.aspx.designer.cs">
+      <DependentUpon>gioithieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\lichsuphattrien.aspx.cs">
+      <DependentUpon>lichsuphattrien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\lichsuphattrien.aspx.designer.cs">
+      <DependentUpon>lichsuphattrien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\photo.aspx.cs">
+      <DependentUpon>photo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\photo.aspx.designer.cs">
+      <DependentUpon>photo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\tintuc.aspx.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\tintuc.aspx.designer.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sites\en\Pages\video.aspx.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sites\en\Pages\video.aspx.designer.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucAboutMain.ascx.cs">
+      <DependentUpon>ucAboutMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucAboutMain.ascx.designer.cs">
+      <DependentUpon>ucAboutMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucbanlanhdao.ascx.cs">
+      <DependentUpon>ucbanlanhdao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucbanlanhdao.ascx.designer.cs">
+      <DependentUpon>ucbanlanhdao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumb.ascx.cs">
+      <DependentUpon>ucBreadcumb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumb.ascx.designer.cs">
+      <DependentUpon>ucBreadcumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumbMEDIA.ascx.cs">
+      <DependentUpon>ucBreadcumbMEDIA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucBreadcumbMEDIA.ascx.designer.cs">
+      <DependentUpon>ucBreadcumbMEDIA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucHistory.ascx.cs">
+      <DependentUpon>ucHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucHistory.ascx.designer.cs">
+      <DependentUpon>ucHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuBottom.ascx.cs">
+      <DependentUpon>ucMenuBottom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuBottom.ascx.designer.cs">
+      <DependentUpon>ucMenuBottom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuSideEN.ascx.cs">
+      <DependentUpon>ucMenuSideEN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuSideEN.ascx.designer.cs">
+      <DependentUpon>ucMenuSideEN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuTop.ascx.cs">
+      <DependentUpon>ucMenuTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucMenuTop.ascx.designer.cs">
+      <DependentUpon>ucMenuTop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsBreadCumb.ascx.cs">
+      <DependentUpon>ucNewsBreadCumb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsBreadCumb.ascx.designer.cs">
+      <DependentUpon>ucNewsBreadCumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail.ascx.cs">
+      <DependentUpon>ucNewsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail.ascx.designer.cs">
+      <DependentUpon>ucNewsDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail2.ascx.cs">
+      <DependentUpon>ucNewsDetail2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsDetail2.ascx.designer.cs">
+      <DependentUpon>ucNewsDetail2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsList.ascx.cs">
+      <DependentUpon>ucNewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsList.ascx.designer.cs">
+      <DependentUpon>ucNewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsListMain.ascx.cs">
+      <DependentUpon>ucNewsListMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsListMain.ascx.designer.cs">
+      <DependentUpon>ucNewsListMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsRelated.ascx.cs">
+      <DependentUpon>ucNewsRelated.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucNewsRelated.ascx.designer.cs">
+      <DependentUpon>ucNewsRelated.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPanoSlideFullWidth.ascx.cs">
+      <DependentUpon>ucPanoSlideFullWidth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPanoSlideFullWidth.ascx.designer.cs">
+      <DependentUpon>ucPanoSlideFullWidth.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPhoto.ascx.cs">
+      <DependentUpon>ucPhoto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucPhoto.ascx.designer.cs">
+      <DependentUpon>ucPhoto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucProductMain.ascx.cs">
+      <DependentUpon>ucProductMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucProductMain.ascx.designer.cs">
+      <DependentUpon>ucProductMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopBar_KH.ascx.cs">
+      <DependentUpon>ucTopBar_KH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopBar_KH.ascx.designer.cs">
+      <DependentUpon>ucTopBar_KH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopHeading.ascx.cs">
+      <DependentUpon>ucTopHeading.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucTopHeading.ascx.designer.cs">
+      <DependentUpon>ucTopHeading.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucVideo.ascx.cs">
+      <DependentUpon>ucVideo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrols_EN\ucVideo.ascx.designer.cs">
+      <DependentUpon>ucVideo.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="key.snk" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\PVN_ENWEB.pubxml" />
+    <Content Include="PVN_EN.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="wp-content\plugins\nuno-builder\font-awesome\fontawesome-webfont3e6e.eot" />
+    <Content Include="wp-content\plugins\nuno-builder\font-awesome\fontawesome-webfont3e6e.ttf" />
+    <Content Include="wp-content\plugins\nuno-builder\font-awesome\fontawesome-webfont3e6e.woff" />
+    <Content Include="wp-content\plugins\nuno-builder\font-awesome\fontawesome-webfont3e6e.woff2" />
+    <Content Include="wp-content\plugins\nuno-builder\font-awesome\fontawesome-webfontd41d.eot" />
+    <Content Include="wp-content\themes\businext\assets\fonts\ion\ionicons.eot" />
+    <Content Include="wp-content\themes\businext\assets\fonts\ion\ionicons.ttf" />
+    <Content Include="wp-content\themes\businext\assets\fonts\ion\ionicons.woff" />
+    <Content Include="wp-content\themes\businext\assets\fonts\ion\ioniconsd41d.eot" />
+    <Content Include="wp-content\themes\petro\fonts\flaticon.eot" />
+    <Content Include="wp-content\themes\petro\fonts\flaticon.ttf" />
+    <Content Include="wp-content\themes\petro\fonts\flaticon.woff" />
+    <Content Include="wp-content\themes\petro\fonts\flaticond41d.eot" />
+    <Content Include="wp-content\themes\petro\fonts\fontawesome-webfont914c.eot" />
+    <Content Include="wp-content\themes\petro\fonts\fontawesome-webfont914c.ttf" />
+    <Content Include="wp-content\themes\petro\fonts\fontawesome-webfont914c.woff" />
+    <Content Include="wp-content\themes\petro\fonts\fontawesome-webfont914c.woff2" />
+    <Content Include="wp-content\themes\petro\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="wp-content\themes\petro\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wp-content\themes\petro\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wp-content\themes\petro\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wp-content\themes\petro\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wp-content\themes\petro\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="wp-content\themes\petro\fonts\petro-construction\petro-webfontc56b.eot" />
+    <Content Include="wp-content\themes\petro\fonts\petro-construction\petro-webfontc56b.ttf" />
+    <Content Include="wp-content\themes\petro\fonts\petro-construction\petro-webfontc56b.woff" />
+    <Content Include="wp-content\themes\petro\fonts\petro-construction\petro-webfontc56b.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Config_MenuTop.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Config_MenuTop.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pvn.BL\Pvn.BL.csproj">
+      <Project>{7d748087-b470-4596-8aca-e072b3521818}</Project>
+      <Name>Pvn.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.DA\Pvn.DA.csproj">
+      <Project>{a5ba1342-542d-404a-8f40-d89e8063c971}</Project>
+      <Name>Pvn.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Entity\Pvn.Entity.csproj">
+      <Project>{32ab2a10-a17f-4a0c-8c97-4f0553a8f353}</Project>
+      <Name>Pvn.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pvn.Utils\Pvn.Utils.csproj">
+      <Project>{5ee6bcc3-6351-47ad-9b7f-f20dc6d51770}</Project>
+      <Name>Pvn.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55095</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55095/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
